@@ -1,0 +1,23 @@
+<processing.js>
+<script src="buzz.min.js" type="text/javascipt"></script>
+
+<script type="text/javascript">
+	var love_club = new buzz.sound("img/love_club", {formats:["ogg", "mp3"]});
+
+	var bound = false;
+ 9 
+10       function bindJavascript() {
+11         var pjs = Processing.getInstanceById('get canvas id');
+12         if(pjs!=null) {
+13           pjs.bindJavascript(this);
+14           bound = true; 
+			}
+15         if(!bound) setTimeout(bindJavascript, 250);
+16       }
+17       bindJavascript();
+
+	function playSound() {
+		sound.play();
+	}
+
+</script>
